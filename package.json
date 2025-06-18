@@ -1,0 +1,72 @@
+{
+  "name": "collaborative-ai-platform",
+  "version": "2.0.0",
+  "description": "MCP-First Collaborative Intelligence Platform with Aerial Intelligence & Professional CAD Generation",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node src/test/run-tests.js",
+    "mcp:aerial": "node mcp-servers/aerial-cad-intelligence.js",
+    "mcp:knowledge": "node mcp-servers/knowledge-base.js",
+    "mcp:collaboration": "node mcp-servers/collaboration-protocol.js",
+    "mcp:all": "concurrently \"npm run mcp:aerial\" \"npm run mcp:knowledge\" \"npm run mcp:collaboration\""
+  },
+  "keywords": [
+    "mcp",
+    "collaborative-ai",
+    "agent-intelligence",
+    "cross-industry-learning",
+    "aerial-intelligence",
+    "satellite-analysis",
+    "cad-generation",
+    "construction-automation",
+    "agent-collaboration",
+    "professional-deliverables"
+  ],
+  "author": "Collaborative AI Platform",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "node-fetch": "^3.3.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "puppeteer": "^21.0.0",
+    "opencv4nodejs": "^6.0.0",
+    "dxf-writer": "^1.1.0",
+    "crypto": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkidder97/collaborative-ai-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkidder97/collaborative-ai-platform/issues"
+  },
+  "homepage": "https://github.com/mkidder97/collaborative-ai-platform#readme",
+  "mcp-servers": {
+    "aerial-cad-intelligence": {
+      "command": "node",
+      "args": ["mcp-servers/aerial-cad-intelligence.js"],
+      "description": "Satellite imagery analysis and professional CAD generation"
+    },
+    "knowledge-base": {
+      "command": "node", 
+      "args": ["mcp-servers/knowledge-base.js"],
+      "description": "Industry standards and cross-agent knowledge management"
+    },
+    "collaboration-protocol": {
+      "command": "node",
+      "args": ["mcp-servers/collaboration-protocol.js"], 
+      "description": "Agent-to-agent communication and workflow coordination"
+    }
+  }
+}
